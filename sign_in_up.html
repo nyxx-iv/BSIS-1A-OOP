@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="./sign_in_up.css">
+  
+  <title>TECHIES</title>
+</head>
+<body>
+    
+  <div class="container" id="container">  
+    <div class="form-container sign-up">
+        
+      <form onsubmit="registerUser(event)">
+  <h1>Register Account</h1>
+  <div class="social-icons">
+    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+  </div>
+  <input type="text" id="regName" placeholder="Name" required>
+  <input type="email" id="regEmail" placeholder="Email" required>
+  <input type="password" id="regPassword" placeholder="Password" required>
+  <button type="submit">Register</button>
+</form>
+
+      
+    </div>
+
+    <div class="form-container sign-in">
+        
+      <form onsubmit="loginUser(event)">
+  <h1>Log In</h1>
+  <div class="social-icons">
+    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+  </div>
+  <input type="email" id="username" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <a href="#">Forgot Password?</a>
+  <button type="submit">Log In</button>
+</form>
+
+    </div>
+
+    <div class="toggle-container">
+      <div class="toggle">
+          
+        <div class="toggle-panel toggle-left">
+          <h1>Hello Old Friend!</h1>
+          <p>Click Log In If You Already Have An Account</p>
+          <button class="hidden" id="login">Log In</button>
+        </div>
+        
+        <div class="toggle-panel toggle-right">
+          <h1>Welcome New Friend!</h1>
+          <p>Click Register If You Don't Have Account Yet</p>
+          <button class="hidden" id="register">Register</button>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <script src="sign_in_up.js"></script>
+  
+</body>
+</html>

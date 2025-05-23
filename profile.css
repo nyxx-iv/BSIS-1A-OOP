@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  color: #00a5ff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menutop a,
+.navr a,
+.profile-icon a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+nav.sidenav {
+  width: 230px;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  position: fixed;
+  top: 70px; /* below the navbar */
+  bottom: 0;
+  overflow-y: auto; /* makes it scrollable */
+}
+
+
+aside nav.sidenav {
+  width: 20%;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  position: fixed;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav .profile {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sidenav .profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidenav .name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.sidenav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidenav a.nav-link {
+  display: block;
+  padding: 10px 15px;
+  margin: 8px 0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidenav a:hover,
+.sidenav a.active {
+  background-color: #00a5ff;
+  color: white;
+  font-weight: bold;
+}
+
+.main {
+  margin-left: 23%;
+  margin-top: 20px;
+  width: 75%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card a.editable {
+  color: #444;
+  margin-left: 10px;
+}
+
+.method img {
+  margin: 10px 15px 0 0;
+  transition: transform 0.2s;
+  max-width: 100%;
+}
+
+.method img:hover {
+  transform: scale(1.05);
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  aside nav.sidenav {
+    position: static;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    margin-top: 0;
+  }
+
+  .main {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .menutop {
+    flex-direction: column;
+  }
+
+  .method
+  {
+    margin-top: 3%;
+  }
+}

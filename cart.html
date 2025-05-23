@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="cart.css"/>
+  <link href="./home.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="nav">
+  <div class="logo">
+    <a href="./home.html"><i class="fas fa-computer" href="./home.html"></i> TECHIES</a>
+  </div>
+  <div class="menutop">
+    <a href="./home.html">HOME</a>
+    <a class="active" href="./cart.html">CART</a>
+    <a href="./contactus.html">CONTACT US</a>
+  </div>
+  <div class="navr">
+    <div class="acc">
+      <a class="login-btn" href="sign_in_up.html?mode=signin">Login</a>
+      <a class="reg-btn" href="sign_in_up.html?mode=signup">Register</a>
+    </div>
+  </div>
+    <div class="profile-icon">
+      <a href="Profile.html" class="nav-link"><i class="fa-solid fa-user-circle"></i></a>
+    </div>
+</div>
+
+
+  <header>
+    <h1>Your Shopping Cart</h1>
+  </header>
+
+  <main>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-summary">
+      <p>Total: <span id="cart-total">₱0.00</span></p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </main>
+
+  <div id="checkoutModal" class="checkout-modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Order Summary</h2>
+      <div id="order-items"></div>
+      <p class="total-checkout">Total: <span id="modal-total">₱0.00</span></p>
+      <button id="confirm-order">Confirm Order</button>
+    </div>
+  </div>
+
+  <div id="modal-overlay" class="hidden"></div>
+
+  <script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "sign_in_up.html";
+  }
+</script>
+
+  <script src="cart.js"></script>
+</body>
+</html>

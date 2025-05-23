@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - TECHIES HOME</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="./home.css" rel="stylesheet"/>
+<link href="./contactus.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+  <div class="nav">
+  
+  <div class="logo">
+    <a href="./home.html"><i class="fas fa-computer" href="./home.html"></i> TECHIES</a>
+  </div>
+  
+  <div class="menutop">
+    <a href="./home.html">HOME</a>
+    <a href="./cart.html">CART</a>
+    <a class="active" href="contactus.html">CONTACT US</a>
+  </div>
+  
+  <div class="navr">
+    <div class="acc">
+      <a class="login-btn" href="sign_in_up.html?mode=signin">Login</a>
+      <a class="reg-btn" href="sign_in_up.html?mode=signup">Register</a>
+    </div>
+  </div>
+  
+    <div class="profile-icon">
+      <a href="Profile.html" class="nav-link"><i class="fa-solid fa-user-circle"></i></a>
+    </div>
+  </div>
+</div>
+  <div class="main">
+  <div class="about">
+      <h1>TECHIES</h1>
+      <h3>Powering Your Digital World</h3>
+  
+  <p>Welcome to <strong>Techies</strong>, your go-to destination for the latest and greatest in tech gear. Whether you're building your dream PC, upgrading your setup, or just looking for high-quality accessories, we've got you covered.</p>
+  
+  <p><strong>Who We Are</strong></p>
+  <p>At <strong>Techies</strong>, we’re more than just another e-commerce site — we're a community of tech enthusiasts, gamers, builders, and everyday users who believe that the right tools can unlock endless possibilities.</p>
+  
+  <p>Founded in 2025, Techies was created by a small team of hardware lovers who saw a need for a platform that’s fast, reliable, and genuinely passionate about technology. We bring together handpicked components, honest reviews, and a seamless shopping experience — all in one place.</p>
+  
+  <p><strong>What We Offer</strong></p>
+  <p class="list">
+    - <strong>Curated Tech Products:</strong> From GPUs to gaming peripherals, we offer trusted brands and emerging tech finds.<br>
+    - <strong>Competitive Pricing:</strong> We keep things affordable without compromising on quality.<br>
+    - <strong>Customer-Centric Support:</strong> Fast, friendly, and knowledgeable help when you need it.<br>
+    - <strong>Fast Delivery:</strong> We value your time and work with reliable couriers to get your gear to you ASAP.
+  </p>
+
+  <p><strong>Our Mission</strong></p>
+  <p>To make cutting-edge technology accessible, understandable, and exciting for everyone — whether you’re a first-time buyer or a seasoned techie.</p>
+
+  <p><strong>Join the Techies Community</strong></p>
+  <p>Stay updated with our latest deals, product drops, and guides. Follow us on social media or subscribe to our newsletter — and get ready to level up your tech game.</p>
+  
+  <div class="smIcons">
+    <a class="icons" href="https://m.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+    <a class="icons" href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+    <a class="icons" href="https://www.tiktok.com/en/"><i class="fa-brands fa-tiktok"></i></a>
+    <a class="icons" href="https://www.google.co.uk/?source=sh%2Fx%2Fsrp%2Fwr%2Fm1%2F2&kgs=36ab0b508c5c99de"><i class="fa-brands fa-google"></i></a>
+   </div>
+  
+  </div>
+
+    <div class="content">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="https://formspree.io/f/xpwdnayj" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  </div>
+
+  <footer class="footer">
+  <div class="menubottom">
+    <a href="./home.html">HOME</a>
+    <a href="./cart.html">CART</a>
+    <a class="active" href="contactus.html">CONTACT US</a>
+  </div>
+  <div class="socmedIcons">
+    <a class="icon" href="https://m.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+    <a class="icon" href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+    <a class="icon" href="https://www.tiktok.com/en/"><i class="fa-brands fa-tiktok"></i></a>
+    <a class="icon" href="https://www.google.co.uk/?source=sh%2Fx%2Fsrp%2Fwr%2Fm1%2F2&kgs=36ab0b508c5c99de"><i class="fa-brands fa-google"></i></a>
+    <h4>Follow Us On Our Social Media</h4>
+  </div>
+  <h5>© <b>2025 PC PARTNER</b> | PRIVACY POLICY | TERMS OF SERVICE | CONTACT US</h5>
+</footer>
+
+  <script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "sign_in_up.html";
+  }
+
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your message has been sent.");
+        form.reset();
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    });
+  </script>
+
+</body>
+</html>

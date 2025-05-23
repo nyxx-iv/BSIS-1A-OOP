@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>TECHIES HOME</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="./home.css" rel="stylesheet"/>
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "sign_in_up.html";
+  }
+</script>
+<script src="./home.js" defer></script>
+</head>
+<body>
+<div class="nav">
+  <div class="hamburger" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="logo">
+    <a href="./home.html"><i class="fas fa-computer" href="./home.html"></i> TECHIES</a>
+  </div>
+  <div class="menutop">
+    <a class="active" href="./home.html">HOME</a>
+    <a href="./cart.html">CART</a>
+    <a href="./contactus.html">CONTACT US</a>
+  </div>
+  <div class="navr">
+    <div class="acc">
+      <a class="login-btn" href="sign_in_up.html?mode=signin">Login</a>
+      <a class="reg-btn" href="sign_in_up.html?mode=signup">Register</a>
+    </div>
+    
+      <div class="search-modal-content">
+        <span class="close-btn" onclick="toggleSearchModal()">×</span>
+        <input class="search" type="text" id="searchInput" placeholder="Search products..."/>
+      </div>
+    </div>
+    <div class="profile-icon">
+      <a href="Profile.html" class="nav-link"><i class="fa-solid fa-user-circle"></i></a>
+    </div>
+  </div>
+ </div>
+
+<div class="container">
+  <aside class="sidebar">
+    <ul>
+      <li data-filter="All">All Items</li>
+      <li data-filter="Monitor">Monitor</li>
+      <li data-filter="CPU">Central Processing Unit</li>
+      <li data-filter="Mouse">Mouse</li>
+      <li data-filter="Keyboard">Keyboard</li>
+      <li data-filter="GPU">Graphics Processing Unit</li>
+      <li data-filter="Set">Computer Set</li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <div class="grid">
+      <div class="item" data-category="Monitor" data-name="Monitor 1" data-price="1513">
+        <img alt="MONITOR" src="./moni1.jpeg"/>
+        <div class="description">Gaming Monitor.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Monitor" data-name="Monitor 2" data-price="5235">
+        <img alt="MONITOR" src="./mon1.jpg"/>
+        <div class="description">Gaming Monitor.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Monitor" data-name="Monitor 3" data-price="1150">
+        <img alt="MONITOR" src="./mon6.jpg"/>
+        <div class="description">Gaming Monitor.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Monitor" data-name="philips E Line 325E1C 32 QHD VA Curbed Monitor" data-price="6550">
+        <img alt="MONITOR" src="./mon3.jpg"/>
+        <div class="description">Gaming Monitor.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Monitor" data-name="Monitor 4" data-price="4150">
+        <img alt="MONITOR" src="./mon4.jpg"/>
+        <div class="description">Gaming Monitor.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Monitor" data-name="Monitor 5" data-price="2150">
+        <img alt="MONITOR" src="./mon2.jpg"/>
+        <div class="description">Gaming Monitor.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="CPU" data-name="CPU 1" data-price="2520">
+        <img alt="CPU" src="./cpu.jpg"/>
+        <div class="description">Powerful CPU For Gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="CPU" data-name="CPU 2" data-price="8850">
+        <img alt="CPU" src="./cpu2.jpg"/>
+        <div class="description">Powerful CPU For Gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="CPU" data-name="CPU 3" data-price="2340">
+        <img alt="CPU" src="./cpu3.jpg"/>
+        <div class="description">Powerful CPU For Gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="CPU" data-name="CPU 4" data-price="9725">
+        <img alt="CPU" src="./cp4.jpg"/>
+        <div class="description">Powerful CPU For Gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="CPU" data-name="CPU 5" data-price="7450">
+        <img alt="CPU" src="./cp5.jpg"/>
+        <div class="description">Powerful CPU For Gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart" action="sign_in_up.html">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="CPU" data-name="CPU 6 " data-price="2955">
+        <img alt="CPU" src="./cp6.jpg"/>
+        <div class="description">Powerful CPU For Gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Mouse" data-name="Mouse 1" data-price="2893">
+        <img alt="MOUSE" src="./mom1.jpg"/>
+        <div class="description">Ergonomic wireless mouse with adjustable DPI.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Mouse" data-name="Mouse2 " data-price="3614">
+        <img alt="MOUSE" src="./mom2.avif"/>
+        <div class="description">Ergonomic wireless mouse with adjustable DPI.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Mouse" data-name="Mouse 3" data-price="3473">
+        <img alt="MOUSE" src="./mom5.jpg"/>
+        <div class="description">Ergonomic wireless mouse with adjustable DPI.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Keyboard" data-name="Keyboard 1" data-price="2370">
+        <img alt="KEYBOARD" src="./key1.jpg"/>
+        <div class="description">Mechanical keyboard with RGB lighting.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Keyboard" data-name="Keyboard 2" data-price="2147">
+        <img alt="KEYBOARD" src="./key2.jpg"/>
+        <div class="description">Mechanical keyboard with RGB lighting.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Keyboard" data-name="Keyboard 3" data-price="2847">
+        <img alt="KEYBOARD" src="./key4.jpg"/>
+        <div class="description">Mechanical keyboard with RGB lighting.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+      <div class="item" data-category="Keyboard" data-name="Keyboard 3" data-price="2950">
+        <img alt="KEYBOARD" src="./key3.jpg"/>
+        <div class="description">Mechanical keyboard with RGB lighting.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="GPU" data-name="GPU 1" data-price="400">
+        <img alt="GPU" src="./GPU1.jpg"/>
+        <div class="description">High-performance graphics card for gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="GPU" data-name="GPU 2" data-price="400">
+        <img alt="GPU" src="./GPU2.jpg"/>
+        <div class="description">High-performance graphics card for gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="GPU" data-name="GPU 3" data-price="400">
+        <img alt="GPU" src="./GPU3.jpg"/>
+        <div class="description">High-performance graphics card for gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="GPU" data-name="GPU 4" data-price="26333">
+        <img alt="GPU" src="./GPU4.jpg"/>
+        <div class="description">High-performance graphics card for gaming.</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Set" data-name="Computer Set 1" data-price="74900">
+        <img alt="Set" src="./set1.jpg"/>
+        <div class="description">Complete computer set</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Set" data-name="Computer Set 2" data-price="48900">
+        <img alt="Set" src="./set2.webp"/>
+        <div class="description">Complete computer set</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Set" data-name="Computer Set" data-price="52900">
+        <img alt="Set" src="./set3.webp"/>
+        <div class="description">Complete computer set</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="item" data-category="Set" data-name="Computer Set" data-price="23900">
+        <img alt="Set" src="./set4.jpg"/>
+        <div class="description">Complete computer set</div>
+        <h3 class="price"></h3>
+        <div class="item-buttons">
+          <button class="add-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="menubottom">
+    <a class="active" href="./home.html">HOME</a>
+    <a href="./cart.html">CART</a>
+    <a href="./contactus.html">CONTACT</a>
+  </div>
+  <div class="socmedIcons">
+    <a class="icon" href="https://m.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+    <a class="icon" href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+    <a class="icon" href="https://www.tiktok.com/en/"><i class="fa-brands fa-tiktok"></i></a>
+    <a class="icon" href="https://www.google.co.uk/?source=sh%2Fx%2Fsrp%2Fwr%2Fm1%2F2&kgs=36ab0b508c5c99de"><i class="fa-brands fa-google"></i></a>
+    <h4>Follow Us On Our Social Media</h4>
+  </div>
+  <h5>© <b>2025 PC PARTNER</b> | PRIVACY POLICY | TERMS OF SERVICE | CONTACT US</h5>
+</footer>
+
+<div id="imageModal" class="modal hidden">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage" />
+  <div id="modalCaption"></div>
+</div>
+
+</body>
+</html>
